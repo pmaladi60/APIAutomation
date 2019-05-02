@@ -1,0 +1,54 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+//apply plugin: 'maven'
+
+
+repositories {
+	jcenter()
+	mavenCentral()
+}
+
+
+buildscript {
+	repositories {
+		jcenter()
+		mavenCentral()
+		
+	}
+	dependencies {
+		classpath("net.serenity-bdd:serenity-gradle-plugin:1.2.4")
+	}
+}
+
+dependencies {
+	
+	testCompile 'net.serenity-bdd:serenity-core:1.2.4'
+	testCompile 'net.serenity-bdd:serenity-junit:1.2.4'
+	testCompile('junit:junit:4.12')
+	testCompile('org.assertj:assertj-core:1.7.0')
+	testCompile('org.slf4j:slf4j-simple:1.7.7')
+	compile 'net.serenity-bdd:serenity-cucumber:1.1.24'
+	
+	/*
+	testCompile 'junit:junit:4.12'
+	compile 'org.slf4j:slf4j-simple:1.7.25'
+	compile 'org.slf4j:slf4j-api:1.7.25'
+	compile 'net.serenity-bdd:serenity-core:1.9.30'
+	compile 'net.serenity-bdd:serenity-junit:1.9.30'
+	compile 'net.serenity-bdd:serenity-cucumber:1.9.12'
+	compile 'net.serenity-bdd:serenity-rest-assured:1.9.30'
+	compile 'com.fasterxml.jackson.core:jackson-core:2.9.5'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.5'
+	compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.5'
+	
+	compile 'org.assertj:assertj-core:1.7.0'
+	compile 'info.cukes:cucumber-core:1.2.5'
+	compile 'info.cukes:cucumber-java:1.2.5'
+	compile 'info.cukes:cucumber-junit:1.2.5'
+	compile 'info.cukes:gherkin:2.12.2'
+*/
+	
+}
